@@ -1,0 +1,143 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap");
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f7f9fc;
+  margin: 0;
+}
+
+.container {
+  width: 100vw;
+  max-width: 800px;
+  padding: 30px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+}
+
+.container:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading Styles */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333333;
+  font-size: 24px;
+}
+
+/* Add Task Container */
+.AddTask-Container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.AddTask-Container input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  outline: none;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #000;
+}
+
+.AddTask-Container button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease-out;
+}
+
+.AddTask-Container button:hover {
+  background-color: #0056b3;
+}
+
+/* Task Cards Container */
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #555555;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Task Number Styling */
+.task-number {
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Task Content Styling */
+.task-content {
+  flex: 1;
+  /* Ensures task content takes up remaining space */
+  word-wrap: break-word;
+  /* Wraps content if it's too long */
+}
+
+
+.delete-icon{
+  cursor: pointer;
+  color: #dc3545;
+  transition: transform 0.3s ease-out;
+}
+.delete-icon:hover{
+  transform: scale(1.2);
+}
+.edit-icon{
+  cursor: pointer;
+  color: #007bff;
+  transition: transform 0.3s ease-out;
+}
+.edit-icon:hover{
+  transform: scale(1.2);
+}
+
+.check-icon{
+  cursor: pointer;
+    color: #4caf50;
+    /* This will apply to all SVGs using currentColor */
+  transition: transform 0.3s ease-out;
+}
+.check-icon:hover{
+  transform: scale(1.2);
+
+}
+
+.task-content.completed {
+  text-decoration: line-through;
+  color: #999999;
+}
